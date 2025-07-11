@@ -3,24 +3,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Zitex Enterprises Limited</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      color: #222;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
     }
     header {
-      background-color: #0A3D62;
+      background-color: #1A237E;
       color: white;
       padding: 20px;
       text-align: center;
     }
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
     nav {
-      background-color: #1e272e;
-      text-align: center;
+      background-color: #0D47A1;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
       padding: 10px 0;
     }
     nav a {
@@ -30,27 +36,56 @@
       font-weight: bold;
     }
     section {
-      padding: 30px;
-      max-width: 900px;
+      padding: 30px 20px;
+      max-width: 1100px;
       margin: auto;
     }
-    .grid {
+    .grid, .testimonials {
       display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
     .card {
       background: white;
-      border-radius: 8px;
       padding: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 10px;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    form button {
+      background-color: #1A237E;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
     }
     footer {
-      background-color: #0A3D62;
+      background-color: #0D47A1;
       color: white;
       text-align: center;
       padding: 15px;
-      margin-top: 40px;
+      margin-top: 30px;
+    }
+    h2 {
+      color: #1A237E;
     }
   </style>
 </head>
@@ -58,7 +93,7 @@
 
 <header>
   <h1>ZEL</h1>
-  <h2>Zitex Enterprises Limited</h2>
+  <p>Zitex Enterprises Limited</p>
   <p><em>Building Trust, Delivering Quality — Nationwide</em></p>
 </header>
 
@@ -66,50 +101,78 @@
   <a href="#about">About</a>
   <a href="#services">Services</a>
   <a href="#projects">Projects</a>
+  <a href="#testimonials">Testimonials</a>
   <a href="#contact">Contact</a>
 </nav>
 
 <section id="about">
   <h2>About Us</h2>
-  <p>Zitex Enterprises Limited is a registered construction company based in Kenya. We specialize in construction, building plans, site management, and nationwide project supervision. We’re committed to excellence and timely delivery.</p>
+  <p>Zitex Enterprises Limited is a trusted Kenyan construction company offering comprehensive solutions in project planning, architectural design, supervision, and full project delivery. We serve clients countrywide with excellence and integrity from our base in Oyugis Town.</p>
 </section>
 
 <section id="services">
   <h2>Our Services</h2>
   <div class="grid">
-    <div class="card">
-      <h3>Construction</h3>
-      <p>High-quality building services for residential, commercial, and industrial projects.</p>
-    </div>
-    <div class="card">
-      <h3>Project Management</h3>
-      <p>Expert oversight and implementation from planning to completion.</p>
-    </div>
-    <div class="card">
-      <h3>Architectural Design</h3>
-      <p>Tailored building plans and designs by experienced professionals.</p>
-    </div>
+    <div class="card"><h3>Construction</h3><p>Residential, commercial, and infrastructure building done right.</p></div>
+    <div class="card"><h3>Architectural Design</h3><p>Detailed building plans and elegant architectural drawings.</p></div>
+    <div class="card"><h3>Project Management</h3><p>From planning to handover — we manage every step professionally.</p></div>
   </div>
 </section>
 
 <section id="projects">
-  <h2>Our Projects</h2>
+  <h2>Projects Showcase</h2>
   <div class="grid">
-    <div class="card">Upcoming Project 1</div>
-    <div class="card">Upcoming Project 2</div>
-    <div class="card">Upcoming Project 3</div>
+    <div class="card">
+      <img src="https://i.imgur.com/rY3wPzY.jpg" alt="Ongoing Apartment Construction" />
+      <h4>Ongoing Apartment Project – Nairobi</h4>
+      <p>Multi-storey residential development currently under construction.</p>
+      <img src="https://i.imgur.com/AXRz3OB.jpg" alt="Architectural Plan" />
+      <p><em>Architectural plan view</em></p>
+    </div>
+    <div class="card">
+      <img src="https://i.imgur.com/ACW34gy.jpg" alt="Completed Road Kisumu" />
+      <h4>Completed Road Project – Kisumu</h4>
+      <p>Successful tarmac and drainage project delivered in early 2025.</p>
+      <img src="https://i.imgur.com/T7WTOak.jpg" alt="Road Plan" />
+      <p><em>Drainage and road section plan</em></p>
+    </div>
+    <div class="card">
+      <img src="https://i.imgur.com/9MmWf3z.jpg" alt="Completed Housing Eldoret" />
+      <h4>Completed Residential Units – Eldoret</h4>
+      <p>Modern 3-bedroom homes with full amenities.</p>
+      <img src="https://i.imgur.com/YBQcHqn.jpg" alt="House Plan" />
+      <p><em>Architectural floor plan</em></p>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials">
+  <h2>Client Testimonials</h2>
+  <div class="testimonials">
+    <div class="card">“Zitex Enterprises transformed our land into beautiful homes — I’m impressed!”<br><strong>— Grace K., Eldoret</strong></div>
+    <div class="card">“They supervised everything perfectly and delivered on time.”<br><strong>— Peter M., Kisumu</strong></div>
+    <div class="card">“The apartment designs and planning were very professional.”<br><strong>— Mary W., Nairobi</strong></div>
   </div>
 </section>
 
 <section id="contact">
   <h2>Contact Us</h2>
-  <p><strong>Phone:</strong> +254 706 296 135</p>
-  <p><strong>Email:</strong> okothcharles565@gmail.com</p>
-  <p><strong>Location:</strong> Nationwide, Kenya</p>
+  <p><strong>Phone:</strong> +254 706 296 135<br>
+     <strong>Email:</strong> okothcharles565@gmail.com<br>
+     <strong>Location:</strong> Oyugis Town, Homa Bay County</p>
+  <form name="contact">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <input type="tel" name="phone" placeholder="Phone Number" />
+    <textarea name="message" rows="4" placeholder="Your Message..." required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+  <h3>Find Us on the Map</h3>
+  <iframe src="https://maps.google.com/maps?q=Oyugis%20Town&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
 </section>
 
 <footer>
-  <p>&copy; 2025 Zitex Enterprises Limited. All rights reserved.</p>
+  <p>&copy; 2025 Zitex Enterprises Limited — All rights reserved.</p>
 </footer>
 
 </body>

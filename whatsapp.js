@@ -1,1 +1,1 @@
-// WhatsApp integration script placeholder
+// WhatsApp button script

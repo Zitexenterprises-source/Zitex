@@ -1,1 +1,1 @@
-// Language toggle script placeholder
+// Language toggle script
